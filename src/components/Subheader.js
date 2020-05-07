@@ -5,7 +5,7 @@ class Subheader extends React.Component {
     render() {
         return(
                 <div className="subheader">
-                    <h3>Top leaked passwords</h3>
+                    <h2>Top leaked passwords</h2>
                 </div>
         )
     }

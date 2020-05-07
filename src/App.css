@@ -4,7 +4,6 @@ html {
 }
 
 /* navstyle */
-
 nav {
   width: 100%;
   display: flex;
@@ -16,6 +15,7 @@ nav {
 .navbar__logo {
  text-decoration: none;
  color: black;
+ font-weight: bold;
 }
 
 .navbar__links {
@@ -32,7 +32,6 @@ nav {
 }
 
 /* header style */
-
 header {
     display: flex;
     flex-direction: row;
@@ -70,11 +69,67 @@ header {
     background-repeat: no-repeat;
 }
 
-.main__img__picture {
-    background-image: url(assets/np-hero-image.png);
+/* subheader style */
+.subheader {
+    padding-top: 50px;
+    text-align: center;
+    color: #373B42;
 }
 
+/* List style */
 
+.password{
+    color: #373B42;
+}
+
+.dropdown {
+    list-style: none;
+    background-color: #fff;
+    background: rgba(255,255,255,0);
+    left: -9999px; 
+}
+
+.dropdown li {
+    padding-top: 1px;
+    float: none;
+    color: #373B42;
+}
+
+.dropdown li:hover ul{
+    display: block;
+}
+
+.list__container {
+    margin: auto 250px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.password_items {
+    display: block;
+    width: 100%;
+
+}
+
+.password__item {
+    color: #373B42;
+    list-style: none;
+    border-bottom: 1px solid #373B42;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* span {
+    display: block;
+    width: 100%;
+    right:0;
+} */
 
 /* media queries */
 

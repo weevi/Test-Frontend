@@ -1,9 +1,14 @@
 import React from 'react';
+import Subheader from './Subheader'
 
 
 class Faq extends React.Component {
     render() {
-        return(<div>From Faq</div>)
+        return(
+        <div>
+            <Subheader />
+        </div>
+        )
     }
 }
 
