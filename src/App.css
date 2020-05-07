@@ -10,6 +10,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background: #EDF8F7;
 }
 
 .navbar__logo {
@@ -27,26 +28,40 @@ nav {
   padding: 10px 15px;
   text-decoration: none;
   color:black;
+  font-weight: bold;
 }
 
 /* header style */
 
 header {
-  display: flex;
-  flex-direction: row;
-  height: 300px;
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #EDF8F7;
+    box-shadow: 0 30px 40px #EDF8F7;
+    padding: 50px;
+    height: 300px;
 }
 
 .title__container {
     flex-grow: 1;
+    
 }
 
 .title__wrapper {
     text-align: end;
+    
+}
+
+.title__wrapper h2 {
+    padding-right: 100px;;
 }
 
 .main__img {
     flex-grow: 2;
+    height: 100%;
 }
 
 .main__img {

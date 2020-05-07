@@ -1,9 +1,14 @@
 import React from 'react';
+import Subheader from './Subheader';
 
 
 class List extends React.Component {
     render() {
-        return(<div>From List</div>)
+        return(
+        <section>
+            <Subheader />
+        </section>
+        )
     }
 }
 
