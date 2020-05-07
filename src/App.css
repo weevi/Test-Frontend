@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+html {
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* navstyle */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar__logo {
+ text-decoration: none;
+ color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar__links {
+  list-style: none;
+  display: flex;
 }
+
+.navbar__item a {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color:black;
+}
+
+/* header style */
+
+header {
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+}
+
+.title__container {
+    flex-grow: 1;
+}
+
+.title__wrapper {
+    text-align: end;
+}
+
+.main__img {
+    flex-grow: 2;
+}
+
+.main__img {
+    background-image: url(assets/np-hero-image.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+.main__img__picture {
+    background-image: url(assets/np-hero-image.png);
+}
+
+
+
+/* media queries */
+
+@media screen and (max-width: 960px) {
+    header {
+      flex-direction: column;
+    }
+}
+    
+
