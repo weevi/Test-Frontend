@@ -1,5 +1,4 @@
 import React from 'react';
-import Subheader from './Subheader';
 import FilterJson from './FilterJson';
 
 
@@ -7,7 +6,9 @@ class List extends React.Component {
     render() {
         return(
         <section>
-            <Subheader />
+            <div className="subheader">
+                    <h2>Top leaked passwords</h2>
+                </div>
             <div className="list__container">
                 
             <div className="list">

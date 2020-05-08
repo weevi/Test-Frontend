@@ -13,6 +13,11 @@ html {
     cursor:pointer;
 }
 
+.btn--header {
+    padding: 10px 30px 10px 30px;
+    font-size: 1em;;
+}
+
 /* Navbar Section */
 nav {
   width: 100%;
@@ -22,9 +27,15 @@ nav {
   background: #edf8f7;
 }
 
+.navbar__logo__wrapper {
+    display: flex;
+    width: 30%;
+    padding-left: 250px;
+}
+
 .navbar__logo {
   text-decoration: none;
-  color: black;
+  color: #151922;
   font-weight: bold;
 }
 
@@ -37,7 +48,7 @@ nav {
   display: inline-block;
   padding: 10px 15px;
   text-decoration: none;
-  color: black;
+  color: #151922;
   font-weight: bold;
 }
 
@@ -53,7 +64,7 @@ header {
   background: #edf8f7;
   box-shadow: 0 30px 40px #edf8f7;
   padding: 50px;
-  height: 300px;
+  height: 350px;
 }
 
 .title__container {
@@ -61,11 +72,14 @@ header {
 }
 
 .title__wrapper {
-  text-align: end;
+  text-align: start;
+  width: 70%;
+  float: right;
 }
 
 .title__wrapper h1 {
   padding-right: 100px;
+  font-size: 2.5em;
 }
 
 .title__wrapper button {
@@ -151,7 +165,7 @@ header {
 
 /* Faq Section */
 .faq {
-  height: 350px;
+  height: 400px;
   background-color: #f8f8f8;
   display: flex;
   flex-direction: column;
@@ -201,13 +215,6 @@ header {
 
 
 /* Form Section */
-.form__section {
-  display: flex;
-  justify-content: center;
-  background: #edf8f7;
-  padding: 50px;
-  height: 330px;
-}
 
 .form__container {
   width: 400px;
@@ -265,6 +272,21 @@ textarea::placeholder {
     color: #383C43;
     font-size: 0.9em;
 }
+
+/* ******** */
+
+.form__section {
+    background: #edf8f7;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__subsection {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    height: 450px;
+  }
 
 .form__img__wrap {
   width: 50%;

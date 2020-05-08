@@ -3,15 +3,23 @@ import Form from './Form';
 
 class FormSection extends React.Component {
     render() {
-        return(
-            <section className="form__section">
+        return (
+            <div className="form__section">
 
-                <div class="form__img__wrap">
-                <div class="form__img"></div>
+                <div className="subheader">
+                    <h2>Get NordPass for business</h2>
                 </div>
-                <Form />
 
-            </section>
+                <div className="form__subsection">
+
+                    <div class="form__img__wrap">
+                        <div class="form__img"></div>
+                    </div>
+
+                    <Form />
+
+                </div>
+            </div>
         )
     }
 }

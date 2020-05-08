@@ -10,7 +10,7 @@ class Header extends React.Component {
                 
                 <div className="title__wrapper">
                     <h1>Get your passwords<br />organized</h1>
-                    <button className="btn">Get started</button>
+                    <button className="btn btn--header">Get started</button>
                 </div>
                     {/* <div className="main__btn">Button</div> */}
             </div>
