@@ -6,7 +6,9 @@ class Faq extends React.Component {
     render() {
         return(
         <div>
+            <div className="faq">
             <Subheader />
+            </div>
         </div>
         )
     }
