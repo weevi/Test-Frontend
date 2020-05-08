@@ -7,15 +7,15 @@ class Header extends React.Component {
         <header>
 
             <div className="title__container">
+                
                 <div className="title__wrapper">
-                    <h2>Get your passwords<br />organized</h2>
+                    <h1>Get your passwords<br />organized</h1>
+                    <button className="btn">Get started</button>
                 </div>
                     {/* <div className="main__btn">Button</div> */}
             </div>
 
-            <div className="main__img">
-                <div className="main__img__picture"></div>
-            </div>
+                <div className="main__img"></div>
 
         </header>
         )

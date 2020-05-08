@@ -4,20 +4,14 @@ import Form from './Form';
 class FormSection extends React.Component {
     render() {
         return(
-            <header>
+            <section className="form__section">
 
-            <div className="title__container">
-                <div className="title__wrapper">
-                    <h2>Get your passwords<br />organized</h2>
+                <div class="form__img__wrap">
+                <div class="form__img"></div>
                 </div>
-                    {/* <div className="main__btn">Button</div> */}
-            </div>
+                <Form />
 
-            <div className="main__img">
-                <div className="main__img__picture"></div>
-            </div>
-
-        </header>
+            </section>
         )
     }
 }

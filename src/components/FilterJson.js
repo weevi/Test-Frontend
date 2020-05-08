@@ -6,8 +6,11 @@ class FilterJson extends React.Component {
     this.state = {
       error: null,
       isLoaded: false,
-      items: []
+      items: [],
+      itemsToShow: 20,
+      expanded: false
     };
+    this.showMore = this.showMore.bind(this);
   }
 
   componentDidMount() {
@@ -32,6 +35,14 @@ class FilterJson extends React.Component {
       )
   }
 
+  showMore() {
+    this.state.itemsToShow === 20 ? (
+      this.setState({ itemsToShow: this.state.items.length, expanded: true })
+    ) : (
+      this.setState({ itemsToShow: 20, expanded: false })
+    )
+  }
+
   render() {
     const { error, isLoaded, items } = this.state;
     if (error) {
@@ -41,13 +52,21 @@ class FilterJson extends React.Component {
     } else {
       return (
           <div className="password">
-        <ul className="password__items">
-          {items.map(item => (
-            <li className="password__item" key={item.count}>
-              {item.value} <span>{item.count}</span>
-            </li>
-          ))}
-        </ul>
+            <ul className="password__items">
+              {this.state.items.slice(0, this.state.itemsToShow).map(item => 
+                  <li className="password__item"  key={item.count}><span>{item.value}</span> {item.count}</li>
+              )}
+           </ul>
+                <div className="btn__wrapper">
+            <button className="btn" onClick={this.showMore}>
+            {this.state.expanded ? (
+             <span>Show 20 </span>
+           ) : (
+             <span>Show all ({items.length})</span>
+           )
+          }
+          </button>
+          </div>
         </div>
       );
     }

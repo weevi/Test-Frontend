@@ -14,6 +14,7 @@ class Navbar extends React.Component {
                 <li className="navbar__item"><a href="#">Blog</a></li>
                 <li className="navbar__item"><a href="#">Help</a></li>
                 <li className="navbar__item"><a href="#">My Account</a></li>
+                <button className="btn btn--nav">Open Vault</button>
             </ul>
         </nav>
         )

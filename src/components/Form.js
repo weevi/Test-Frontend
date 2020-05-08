@@ -20,12 +20,28 @@ class Form extends React.Component {
   
     render() {
       return (
+        <div className="form__container">
         <form onSubmit={this.handleSubmit}>
+          <p>Fill out your details, and we get back to you shortly:</p>
+          <div className="form__elem__wrap">
             <input type="text" placeholder="Name" value={this.state.value} onChange={this.handleChange} />
+            </div>
+
+            <div className="form__elem__wrap">
             <input type="text" placeholder="Email" value={this.state.value} onChange={this.handleChange} />
-            <textarea value={this.state.value} onChange={this.handleChange} />
-          <input type="submit" value="Submit" />
+            </div>
+
+            <div className="form__elem__wrap textarea__wrap">
+            <textarea placeholder="Note" value={this.state.value} onChange={this.handleChange} />
+            </div>
+
+            <div>
+            <p className="comment">This information will be used by NordPass to respond to your <br />inquiry as provided in our <a href='#'>Privacy Policy</a>.</p>
+            <button className="btn">Get started</button>
+          {/* <input className="btn" type="submit" value="Submit" /> */}
+          </div>
         </form>
+        </div>
       );
     }
   }
