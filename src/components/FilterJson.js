@@ -8,9 +8,16 @@ class FilterJson extends React.Component {
       isLoaded: false,
       items: [],
       itemsToShow: 20,
-      expanded: false
+      expanded: false,
+      value: 'count'
     };
     this.showMore = this.showMore.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+    console.log(event.target.value)
   }
 
   componentDidMount() {
@@ -33,6 +40,8 @@ class FilterJson extends React.Component {
           });
         }
       )
+
+
   }
 
   showMore() {
@@ -52,6 +61,11 @@ class FilterJson extends React.Component {
     } else {
       return (
           <div className="password">
+            
+            <select value={this.state.value} onChange={this.handleChange}>
+                                <option value="count">Count</option>
+                                <option value="abc">ABC</option>
+                            </select>
             <ul className="password__items">
               {this.state.items.slice(0, this.state.itemsToShow).map(item => 
                   <li className="password__item"  key={item.count}><span>{item.value}</span> {item.count}</li>

@@ -5,7 +5,7 @@ class Header extends React.Component {
     render() {
         return(
         <header>
-
+        <div className="header__wrap">
             <div className="title__container">
                 
                 <div className="title__wrapper">
@@ -16,7 +16,7 @@ class Header extends React.Component {
             </div>
 
                 <div className="main__img"></div>
-
+        </div>
         </header>
         )
     }
