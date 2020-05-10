@@ -213,13 +213,12 @@ header {
   }
 }
 
-
-
 /* subheader style */
 .subheader {
   padding-top: 50px;
   text-align: center;
   color: #373b42;
+  font-size: 1.1em;
 }
 
 /* List Section */
@@ -230,15 +229,16 @@ header {
   justify-content: space-around;
   margin: 0 auto;
   padding-top: 20px;
-  color: #373B42;
+  color: #373b42;
 }
 
-.list__title--pass, .list__title--count {
+.list__title--pass,
+.list__title--count {
   width: 25%;
 }
 
 .list__title--count select {
-  color: #373B42;
+  color: #373b42;
   /* width: 80%;
   padding: 8px;   */
 }
@@ -249,18 +249,18 @@ header {
 }
 
 .password__item {
-    max-width: 1280px;
-    color: #373B42;
-    border-top: 1px solid #E8E8E9;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    list-style: none;
-    width: 68%;
-    font-weight: bold;
-    font-size: 0.7em;
+  max-width: 1280px;
+  color: #373b42;
+  border-top: 1px solid #e8e8e9;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  list-style: none;
+  width: 68%;
+  font-weight: bold;
+  font-size: 0.7em;
 }
 
 .list__subtitle {
@@ -270,11 +270,11 @@ header {
   max-width: 1280px;
   margin: 0 auto;
   width: 68%;
-  color: #373B42;
+  color: #373b42;
 }
 
 .list__subtitle--count {
-  color: #373B42;
+  color: #373b42;
   width: 20%;
   height: 40px;
 }
@@ -283,13 +283,13 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-bottom: 50px;;
+  padding-bottom: 50px;
 }
 
 @media (max-width: 682px) {
-.list__subtitle--count {
-  width: 30%;
-}
+  .list__subtitle--count {
+    width: 30%;
+  }
 }
 
 /* Faq Section */
@@ -302,7 +302,16 @@ header {
   align-items: center;
 }
 
+.subheader__faq {
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
 .accordion {
+  max-width: 1280px;
   display: flex;
   transition: display 2s linear;
   flex-direction: column;
@@ -310,6 +319,7 @@ header {
   border: 1px solid rgba(128, 128, 128, 0.151);
   width: 30%;
   color: #373b42;
+  margin-bottom: 7px;
 }
 
 .accordion__title {
@@ -341,6 +351,28 @@ header {
 
 .accordion__body {
   font-size: 0.7em;
+}
+
+@media screen and (max-width: 1200px) {
+  .accordion {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .accordion {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .accordion {
+    width: 70%;
+  }
+
+  .faq {
+    height: 600px;
+  }
 }
 
 /* Form Section */

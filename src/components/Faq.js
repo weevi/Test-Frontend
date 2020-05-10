@@ -36,7 +36,7 @@ class Faq extends React.Component {
     render() {
         return (
             <div className="faq">
-                <div className="subheader">
+                <div className="subheader subheader__faq">
                     <h2>Frequently asked questions</h2>
                 </div>
                 {data.map(tab => {
