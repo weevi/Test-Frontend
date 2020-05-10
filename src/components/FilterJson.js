@@ -16,7 +16,7 @@ class FilterJson extends React.Component {
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({ value: event.target.value });
     console.log(event.target.value)
   }
 
@@ -48,8 +48,8 @@ class FilterJson extends React.Component {
     this.state.itemsToShow === 20 ? (
       this.setState({ itemsToShow: this.state.items.length, expanded: true })
     ) : (
-      this.setState({ itemsToShow: 20, expanded: false })
-    )
+        this.setState({ itemsToShow: 20, expanded: false })
+      )
   }
 
   render() {
@@ -60,26 +60,25 @@ class FilterJson extends React.Component {
       return <div>Loading...</div>;
     } else {
       return (
-          <div className="password">
-            
-            <select value={this.state.value} onChange={this.handleChange}>
-                                <option value="count">Count</option>
-                                <option value="abc">ABC</option>
-                            </select>
-            <ul className="password__items">
-              {this.state.items.slice(0, this.state.itemsToShow).map(item => 
-                  <li className="password__item"  key={item.count}><span>{item.value}</span> {item.count}</li>
-              )}
-           </ul>
-                <div className="btn__wrapper">
+        <div className="password">
+
+
+          <ul className="password__items">
+            {this.state.items.slice(0, this.state.itemsToShow).map(item =>
+              <li className="password__item" key={item.count}><span>{item.value}</span> {item.count}</li>
+            )}
+          </ul>
+
+
+          <div className="btn__list">
             <button className="btn" onClick={this.showMore}>
-            {this.state.expanded ? (
-             <span>Show 20 </span>
-           ) : (
-             <span>Show all ({items.length})</span>
-           )
-          }
-          </button>
+              {this.state.expanded ? (
+                <span>Show 20 </span>
+              ) : (
+                  <span>Show all ({items.length})</span>
+                )
+              }
+            </button>
           </div>
         </div>
       );

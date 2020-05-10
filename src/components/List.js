@@ -3,22 +3,23 @@ import FilterJson from './FilterJson';
 
 
 class List extends React.Component {
-       render() {
+    render() {
         return (
             <section>
                 <div className="subheader">
                     <h2>Top leaked passwords</h2>
                 </div>
-                <div className="list__container">
 
-                    <div className="list">
-                        <h4 className="password">Password</h4>
-                        <div>
-                        </div>
-                    </div>
-                    <FilterJson />
+                <div className="list__subtitle">
+
+                    <h4>Password</h4>
+                    <select className="list__subtitle--count">
+                        <option value="count">Count</option>
+                        <option value="abc">ABC</option>
+                    </select>
 
                 </div>
+                <FilterJson />
             </section>
         )
     }
