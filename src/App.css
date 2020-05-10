@@ -146,13 +146,9 @@ header {
 .title__wrapper h1 {
   font-size: 2.5em;
 }
-
 .main__img {
   flex-grow: 2;
   height: 100%;
-}
-
-.main__img {
   background-image: url(assets/np-hero-image.png);
   background-size: auto 100%;
   background-repeat: no-repeat;
@@ -207,8 +203,8 @@ header {
   }
 
   .main__img {
-    width: 30%;
-    height: 50%;
+    width: 70%;
+    height: 150px;
   }
 
   .btn--header {
@@ -370,10 +366,6 @@ header {
     height: 450px;
   }
 
-  .subheader__faq {
-    font-size: 0.7em;
-  }
-
   .accordion__body {
     font-size: 0.6em;
   }
@@ -388,21 +380,24 @@ header {
 
 .form__section {
   background: #edf8f7;
+  display: flex;
+  flex-direction: column;
+  height: 550px;
 }
 
 .form__subsection {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding: 50px;
-  height: 450px;
 }
 
 
 .form__img__wrap {
   width: 50%;
   padding-bottom: 50px;
+  height: 100%;
 }
 
 .form__img {
@@ -410,20 +405,42 @@ header {
   background-size: auto 100%;
   background-repeat: no-repeat;
   height: 100%;
-  flex-grow: 1;
 }
 
 @media screen and (max-width: 768px) {
+
+  .subheader {
+    font-size: 0.7em;
+  }
+
+  .form__section {
+    flex-direction: column;
+    height: 720px;
+    width: 100%;
+  }
+
   .form__subsection {
     flex-direction: column;
+    display: flex;
+    align-items: center;
   }
+
+  .form__img__wrap {
+    height: 250px;
+    width: 100%;;
+  }
+
+  .form__img {
+    width: 100%;
+  }
+    
 }
 
 /* Form Fieldset Section */
 
 .form__fieldset__container {
-  width: 400px;
-  height: 100%;
+width: 40%;
+height: 100%;
 }
 
 form {
@@ -488,6 +505,12 @@ textarea::placeholder {
   font-weight: bold;
   color: #383c43;
   font-size: 0.9em;
+}
+
+@media screen and (max-width: 768px) {
+  .form__fieldset__container {
+    width: 80%;
+  }
 }
 
 /* Footer Section */
