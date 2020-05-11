@@ -12,7 +12,6 @@ class Header extends React.Component {
                     <h1>Get your passwords<br />organized</h1>
                     <button className="btn btn--header">Get started</button>
                 </div>
-                    {/* <div className="main__btn">Button</div> */}
             </div>
 
                 <div className="main__img"></div>
