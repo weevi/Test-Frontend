@@ -1,83 +1,40 @@
 import React from 'react';
+import _ from 'lodash';
+
 
 class FilterJson extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      error: null,
-      isLoaded: false,
-      items: [],
-      itemsToShow: 20,
-      expanded: false,
-      value: 'count'
-    };
-    this.showMore = this.showMore.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-    console.log(event.target.value)
-  }
-
-  componentDidMount() {
-    fetch("https://playground.tesonet.lt/v2/worst-psw.json")
-      .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            isLoaded: true,
-            items: result.passwords
-          });
-        },
-
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      )
 
 
-  }
-
-  showMore() {
-    this.state.itemsToShow === 20 ? (
-      this.setState({ itemsToShow: this.state.items.length, expanded: true })
-    ) : (
-        this.setState({ itemsToShow: 20, expanded: false })
-      )
+  sortBy(){
+    if(this.props.selectedValue === 'count') {
+      return _.sortBy(_.each(this.props.jsonData, item => item.count = parseInt(item.count)),
+            this.props.selectedValue).reverse();
+    } else {
+        return _.sortBy(this.props.jsonData, this.props.selectedValue);
+       
+    }      
   }
 
   render() {
-    const { error, isLoaded, items } = this.state;
+    const error = this.props.error;
+    const isLoaded = this.props.isLoaded;
+
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
+        var passwordList =
+        this.sortBy().slice(0, this.props.itemsToShow).map(item =>
+            <li className="password__item" key={item.count}>
+                <span>{item.value}</span>
+              {item.count}
+            </li>
+          )
       return (
-        <div className="password">
 
-
-          <ul className="password__items">
-            {this.state.items.slice(0, this.state.itemsToShow).map(item =>
-              <li className="password__item" key={item.count}><span>{item.value}</span> {item.count}</li>
-            )}
-          </ul>
-
-
-          <div className="btn__list">
-            <button className="btn" onClick={this.showMore}>
-              {this.state.expanded ? (
-                <span>Show 20 </span>
-              ) : (
-                  <span>Show all ({items.length})</span>
-                )
-              }
-            </button>
-          </div>
+        <div>
+          <ul className="password__items">{passwordList}</ul>
         </div>
       );
     }

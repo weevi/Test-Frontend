@@ -12,8 +12,8 @@ class FormSection extends React.Component {
 
                 <div className="form__subsection">
 
-                    <div class="form__img__wrap">
-                        <div class="form__img"></div>
+                    <div className="form__img__wrap">
+                        <div className="form__img"></div>
                     </div>
 
                     <Form />
